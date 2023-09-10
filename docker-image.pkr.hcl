@@ -13,7 +13,7 @@ variable "docker_image" {
 }
 
 variable "docker_repository" {
-  type = string
+  type    = string
   default = "shanumbra/dev"
 }
 

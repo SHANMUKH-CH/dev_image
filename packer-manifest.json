@@ -8,7 +8,16 @@
       "artifact_id": "shanumbra/dev:latest",
       "packer_run_uuid": "c5c119c7-dced-face-e136-7c3cfdc1e346",
       "custom_data": null
+    },
+    {
+      "name": "ubuntu",
+      "builder_type": "docker",
+      "build_time": 1694310576,
+      "files": null,
+      "artifact_id": "shanumbra/dev:latest",
+      "packer_run_uuid": "ba8d76bb-c38b-a9c5-e401-49f2f29030e4",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "c5c119c7-dced-face-e136-7c3cfdc1e346"
+  "last_run_uuid": "ba8d76bb-c38b-a9c5-e401-49f2f29030e4"
 }
