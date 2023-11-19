@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -xe
 
-apt-get update && apt-get upgrade && apt-get autoremove && apt clean
+apt-get update && apt-get autoremove && apt-get clean
 
 # install the required packages
 apt-get install -y  man \

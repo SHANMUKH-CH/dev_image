@@ -36,6 +36,3 @@ jobs:
         packer validate docker-image.pkr.hcl
         packer build docker-image.pkr.hcl
         docker push shanumbra/dev:latest
-
-    - name: Delete Dangling Images
-      run: docker image prune -f --filter "dangling=true"
