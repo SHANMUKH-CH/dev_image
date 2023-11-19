@@ -1,9 +1,12 @@
 name: Packer Build and Push
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build'
+        required: true
+        default: 'main'
 
 jobs:
   initialize:
@@ -18,7 +21,7 @@ jobs:
         sudo apt-get upgrade
         sudo apt-get remove containerd
         sudo apt-get remove containerd.io
-        sudo apt-get instal docker.io
+        sudo apt-get install docker.io
         sudo systemctl restart docker
         sudo systemctl status docker
 
