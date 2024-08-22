@@ -1,0 +1,23 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    build:
+        if: true
+        runs-on: self-hosted
+
+        steps:
+        - name: Checkout code
+        uses: actions/checkout@v2
+
+        - name: inside docker container self-hosted runner
+          run: |
+            echo ">>> Hello from inside docker container self-hosted runner"
+            echo ">>> Running on"
+            echo ">>> $(hostname)"
+            echo ">>> $(uname -a)"
+            echo ">>> $(cat /etc/os-release)"

@@ -10,19 +10,19 @@ FILE_NAME := docker-image.pkr.hcl
 .PHONY: initialize format validate build push delete
 
 # Target: Packer initialize
-initialize: 
+initialize:
 	packer init $(FILE_NAME)
 
 # Target: Packer format
-format: 
+format:
 	packer fmt $(FILE_NAME)
 
 # Target: Packer validate
-validate: 
+validate:
 	packer validate $(FILE_NAME)
 
 # Target: Packer build
-build: 
+build:
 	packer build $(FILE_NAME)
 
 # Target: push the docker image to Registry
