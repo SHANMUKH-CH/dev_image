@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# GitHub Runner registration
+# Run the config script with the correct parameters
 ./config.sh --url $REPO_URL --token $RUNNER_TOKEN --unattended --replace
 
-# Run the runner
+# Start the runner
 ./run.sh

@@ -4,13 +4,13 @@ SHELL := /usr/bin/bash
 .PHONY: token build run
 
 token:
-	./get-token.sh
+	./get-token.sh > token.env
 
 build:
-	docker build -t self-hosted-runner .
+	source token.env && docker build --build-arg REPO_URL=$$REPO_URL --build-arg RUNNER_TOKEN=$$RUNNER_TOKEN -t self-hosted-runner .
 
 run:
-	./launch.sh
+	docker run --rm -it self-hosted-runner:latest
 
 all: token build run
 

@@ -398,3 +398,6 @@ FodyWeavers.xsd
 
 # packer files
 packer_cache/
+
+# environment file
+token.env
